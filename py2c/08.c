@@ -2,15 +2,16 @@
 
 int main() {
   int first = 1;
-  int val, maxval, minval;
+  int val, max, min;
 
   while (scanf("%d", &val) != EOF) {
-    if (first || val > maxval)
-      maxval = val;
-    if (first || val < minval)
-      minval = val;
+    if (first || val > max)
+      max = val;
+    if (first || val < min)
+      min = val;
     first = 0;
   }
-  printf("Maximum %d\n", maxval);
-  printf("Minimum %d\n", minval);
+
+  printf("Max %d\n", max);
+  printf("Min %d\n", min);
 }

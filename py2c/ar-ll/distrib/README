@@ -1,0 +1,31 @@
+C Source code for Array vs Linked List 'benchmark'
+==================================================
+
+As seen on Computerphile...
+https://www.youtube.com/watch?v=DyG9S9nAlUM
+
+C folder contains the three C source programs
+Assembly code for x86_64 and 68k can be found in the respective folders.
+
+WARNING: The time is printed in clock 'ticks', which is highly specific to the platform, and C standard libraries in use -- they should not be compared across platforms (within the same platform is fine however).
+
+x86 compiled using clang:
+$ gcc -v
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/c++/4.2.1
+Apple LLVM version 8.1.0 (clang-802.0.38)
+Target: x86_64-apple-darwin16.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+Atari code cross-compiled using gcc-4.6.4:
+
+$ /usr/local/atari/bin/m68k-atari-mint-gcc -v
+Using built-in specs.
+COLLECT_GCC=/usr/local/atari/bin/m68k-atari-mint-gcc
+COLLECT_LTO_WRAPPER=/usr/local/atari/libexec/gcc/m68k-atari-mint/4.6.4/lto-wrapper
+Target: m68k-atari-mint
+Configured with: ../gcc-4.6.4/configure --target=m68k-atari-mint --prefix=/usr/local/atari --enable-languages=c,c++ --disable-nls --disable-libstdcxx-pch 'CFLAGS_FOR_TARGET=-O2 -fomit-frame-pointer' 'CXXFLAGS_FOR_TARGET=-O2 -fomit-frame-pointer' --with-gmp=/usr/local/gmp --with-mpfr=/usr/local/mpfr --with-mpc=/usr/local/mpc
+Thread model: single
+gcc version 4.6.4 (MiNT 20130415) (GCC) 
+
+All code compiled with -O3 enabled. 
